@@ -1,0 +1,113 @@
+/* Experience section animations - Performance Optimized */
+
+.experience {
+    padding: 2rem;
+    overflow: hidden;
+ 
+  }
+  
+  /* Blur-to-sharp text animation - Optimized for words instead of characters */
+  .blur-word {
+    opacity: 0;
+    filter: blur(5px); /* Reduced blur amount */
+    animation: blurToSharp 0.6s forwards; /* Reduced animation duration */
+    transform: translateY(5px); /* Reduced transform distance */
+    will-change: opacity, filter, transform; /* Performance hint for browser */
+  }
+  
+  @keyframes blurToSharp {
+    0% {
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+  }
+  
+  /* Card animation from below - Performance optimized */
+  .experience-card {
+    width:75vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1vw;
+    margin-left:1vw;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    opacity: 0;
+    transform: translateY(30px); /* Reduced transform distance */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Simplified transition */
+    will-change: opacity, transform; /* Performance hint for browser */
+  }
+  
+  .animate-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .EXPleft {
+    flex: 2;
+    padding-right: 1rem;
+    width: 20vw;
+  }
+  
+  .EXPRight {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .EXPRight img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    opacity: 0;
+    margin-left: vw;
+    transform: scale(0.95); /* Reduced scale change */
+    transition: transform 0.4s ease, opacity 0.4s ease, translate 0.4s ease; /* Added transition */
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.6s forwards; /* Reduced animation duration */
+    will-change: opacity, transform; /* Performance hint for browser */
+  }
+
+  .experience-card:hover .EXPRight img {
+    transform: translateX(-5px) scale(1.05); /* Move slightly left and scale up */
+    opacity: 1;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .experience-card {
+      flex-direction: column;
+    }
+    
+    .EXPleft {
+      padding-right: 0;
+      padding-bottom: 1rem;
+    }
+    
+    .EXPRight {
+      width: 100%;
+    }
+  }
+  
