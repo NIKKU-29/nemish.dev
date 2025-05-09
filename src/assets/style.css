@@ -3642,7 +3642,7 @@ canvas {
   }
 
   .Stack {
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     font-size: 7vw;
     height: 10vw;
   }
@@ -3650,7 +3650,7 @@ canvas {
 
   .language-btn {
     width: 10vw;
-    height: 20vw;
+    height: 5vw;
   }
 
   .language-btn i {
@@ -3660,6 +3660,13 @@ canvas {
   .language-btn span {
 
     font-size: 3vw;
+  }
+
+  .language-btn img {
+    
+    width: 5vw;
+    font-size : 8vw;
+    
   }
 
 
@@ -3789,8 +3796,8 @@ canvas {
   }
 
   .navbar {
-    width: 6.5vw;
-    height: 35vw;
+    width: 7vw;
+    height: 55vw;
     padding-left: 1.1vw;
 }
 
@@ -3900,6 +3907,73 @@ canvas {
   font-size: 5vw;
 
 }
+
+.EXPleft{
+  width: 100%;
+}
+
+.company {
+  font-weight: bold;
+  color: #fa0e40;
+  font-size: 3.5vw;
+  margin-top: 0.5vw;
+}
+
+.date{
+  font-size: 2.2vw;
+}
+
+
+.EXPleft ul li {
+  line-height: 1.5;
+  font-size: 3vw;
+}
+
+
+.overlayW  {
+  height: 50vw;
+  width: 75vw;
+
+}
+
+.tech-stack3 span {
+    
+    font-size: 3vw;
+    
+}
+.tech-stack2 span {
+    
+    font-size: 3vw;
+    
+}
+.tech-stack1 span {
+   
+    font-size: 3vw;
+   
+}
+
+
+.discount-box h1{
+    font-size:7vw;   
+    margin-bottom:1vw;
+}
+
+.overlayW video {
+  height: 55vw;
+  width: 70vw;
+  border-radius: 2vw;
+}
+
+.EXPleft h3 {
+  font-size: 5.5vw;
+  margin-bottom: 0.5vw;
+}
+
+.EXPRight{
+  display: none;
+}
+
+
 
 .app-form-button {
   font-family: 'nin', sans-serif;

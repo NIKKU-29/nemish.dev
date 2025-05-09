@@ -242,9 +242,36 @@ const Games = () => {
             max-width: 90%;
           }
         }
+
+        @media (max-width: 520px) {
+          
+        .games-box{
+          
+          margin-top:300vw;
+        }
+        
+        .game-card {
+            
+            max-width: 100%;
+          }
+          
+          .game-preview {
+            height: clamp(140px, 40vw, 180px);
+          }
+          
+          .play-btn {
+            padding: clamp(6px, 1.5vw, 8px) clamp(12px, 3vw, 15px);
+            min-width: clamp(80px, 25vw, 100px);
+          }
         
         @media (max-width: 480px) {
-          .game-card {
+          
+        .games-box{
+          margin-top:300vw;
+        }
+        
+        .game-card {
+            
             max-width: 100%;
           }
           
