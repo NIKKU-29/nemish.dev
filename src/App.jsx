@@ -12,6 +12,7 @@ import Games from './components/Games';
 import Contact from './components/Contact';
 import CustomCursor from './components/CustomCursor';
 import Aurora from './components/Aurora';
+import ScrollVelocity from './components/ScrollVelocity';
 
 import './assets/style.css';
 
@@ -206,6 +207,11 @@ const App = () => {
           </div>
         </div>
 
+        <ScrollVelocity
+          texts={['Create .','Something .','Good .']} 
+          velocity="30"
+          className="custom-scroll-text"
+        />    
         <Experience />
         <Projects />
         <Games />

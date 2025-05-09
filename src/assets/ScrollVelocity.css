@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;900&display=swap");
+@font-face {
+  font-family: 'nin';
+  src: url('./files/fonts/dpcomic.ttf') format('truetype');
+}
+
+.parallax { 
+  
+  position: relative;
+  overflow: hidden;
+  width: 98%;
+  margin:auto;
+  border-radius: 2vw;
+  padding : 1vw;
+  
+}
+
+.scroller {
+  
+  
+    font-size: 20vw;
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  font-family: "nin";
+  line-height: 2vw;
+  font-weight: bold;
+  color: #fa0e45;
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.scroller span {
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .scroller {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}

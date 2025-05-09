@@ -1677,6 +1677,7 @@ body {
   border-radius: 1.5vw;
   transition: all 0.6s ease;
   margin-top: 1.5vw;
+  margin-bottom: 30vw;
 }
 
 .box {
@@ -2581,6 +2582,7 @@ p2 {
   border-radius: 1vw;
   width: 85%;
   margin: 10vw;
+  margin-top: 30vw;
 }
 
 .experience h1 {
