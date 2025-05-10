@@ -75,7 +75,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <p style={{ marginBottom: '2vw', marginLeft: '40%', color: 'white', fontSize: '1vw' }}>&copy; 2025 Nemish Sharma. All rights reserved.</p>
+      <p id = "LIGIT">&copy; 2025 Nemish Sharma. All rights reserved.</p>
     </div>
   );
 };

@@ -137,7 +137,7 @@ const App = () => {
     overlay.appendChild(loaderContent);
     document.body.appendChild(overlay);
     
-    const words = ["Create", "Develop", "Experience", "Build", "Debug", "Solve", "Deliver"];
+    const words = [ "Evaluate." , "Plan..", "Build...", "Debug....", "Deliver....."];
     let currentIndex = 0;
     
     loaderText.textContent = words[currentIndex];
@@ -154,7 +154,7 @@ const App = () => {
         loaderText.style.opacity = '1';
       }, 300);
       
-    }, 600);
+    }, 1050);
     
     setTimeout(() => {
       clearInterval(textInterval);
@@ -169,7 +169,7 @@ const App = () => {
         }, 800);
       }, 800);
       
-    }, 3000);
+    }, 5000);
     
   }, []);
 

@@ -1715,6 +1715,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   margin-top: 0.2vw;
+  
 
 }
 
@@ -3382,7 +3383,7 @@ canvas {
 
 .Contact {
   
-  font-size: 2.5vw;
+  font-size: 4.5vw;
   margin-top: 2vw;
   margin-bottom: -2.2vw;
   border-top-left-radius: 5vw;
@@ -3539,9 +3540,6 @@ canvas {
   margin-top: -0.7vw;
 }
 
-.app-form-group {
-  margin-bottom: 2vw;
-}
 
 .app-form-group.message {
   margin-top: 2vw;
@@ -3588,6 +3586,15 @@ canvas {
   
 }
 
+#LIGIT{
+
+  margin-bottom: 2vw;
+  font-size: 4vw;
+  
+  margin-left: 15vw;
+  color: white;
+}
+
 .app-form-button:hover {
   color: #b9134f;
 }
@@ -3617,6 +3624,58 @@ canvas {
 
   }
 
+  
+.pd {
+  width: 100%;
+  height: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius:1.5vw;
+}
+
+.download-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    font-size: 10vw;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 15px 30px;
+    margin-top: -5vw;
+}
+
+.download-btn::after{
+  font-size: 10vw;
+  margin-bottom: 1vw;
+  padding-bottom:1vw;
+}
+
+.scroll-inner {
+    margin-top: 5vw;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    animation: scrollLeft 35s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
   .discount-box,
   .font-box,
   .sign-box,
@@ -3638,7 +3697,8 @@ canvas {
   }
 
   p2 {
-    font-size: 3.5vw;
+    margin-top: 8vw;
+    font-size: 4.8vw;
   }
 
   .Stack {
@@ -3657,44 +3717,46 @@ canvas {
     font-size: 7vw;
   }
 
-  .language-btn span {
 
-    font-size: 3vw;
-  }
 
   .language-btn img {
     
-    width: 5vw;
-    font-size : 8vw;
-    
+    width: 8vw;
   }
 
+  .language-btn span{
+
+    font-size: 5vw;
+    margin-top : -5vw;
+  }
+
+      .language-btn {
+        width: 14vw;
+        height: 11vw;
+    }
+
+    
 
   .font-box h1 {
 
     font-size: 10vw;
     line-height: 7vw;
-    margin-left: 15vw;
+    margin-left: 5vw;
 
   }
 
   .font-box h2 {
     font-size: 4vw;
     margin-top: -4vw;
-    margin-left: 15vw;
+    margin-left: 5vw;
   }
 
-  #play-button {
+  
 
-    left: 30%
-  }
-
-  .font-box img {
-
-    height: 50vw;
-    width: 50vw;
-
-  }
+      .font-box img {
+        height: 63vw;
+        width: 87vw;
+    }
 
   .phone-box img {
     margin-left: 30vw;
@@ -3702,6 +3764,13 @@ canvas {
     width: 25vw;
     margin-top: -12vw;
   }
+
+
+  .info {
+    height: 42vw;
+    display: flex;
+    flex-direction: column;
+}
 
 
   .education-section {
@@ -3712,7 +3781,7 @@ canvas {
   .font-box {
 
     padding-top: 0vw;
-    height: 50vw;
+    height: 70vw;
 }
 
 .sign-box{
@@ -3775,17 +3844,17 @@ canvas {
   }
 
   .discount-box{
-    height: 45vw;
+    height: 60vw;
   }
 
   .button-container {
     margin-top: 3vw;
     justify-content: flex-start;
-    margin-left: 11vw;
+    margin-left: 0vw;
 }
 
   .social-btn {
-    font-size: 5vw;
+    font-size: 8vw;
     padding: 4.5vw;
     margin-left: 1vw;
   }
@@ -3861,7 +3930,7 @@ canvas {
 
   .Contact{
     
-    margin-top: 220vw;
+    margin-top: 50vw;
   }
 
   .container {
@@ -3880,6 +3949,7 @@ canvas {
     
     
     font-size: 15vw;
+    margin-bottom: 10vw;
    
   
 }
@@ -3894,19 +3964,28 @@ canvas {
 
 .app-contact img{
   transform-origin: 2vw;
-  transform: scale(1.8);
-  margin-bottom: 2vw;
-  margin-top: -2vw;
+  transform: scale(1);
+  margin-bottom: 2.5vw;
 }
 
 .app-form-control {
 
   padding: 1vw 1vw;
-  margin-top: 10vw;
-  margin-bottom: 0vw;
+  margin-top: 5vw;
   font-size: 5vw;
 
 }
+
+#LIGIT{
+
+  margin-bottom: 2vw;
+  font-size: 4vw;
+  
+  margin-left: 15vw;
+  color: white;
+}
+
+/* style={{ marginBottom: '2vw', marginLeft: '40%', color: 'white', fontSize: '1vw' }}> */
 
 .EXPleft{
   width: 100%;
@@ -4044,6 +4123,9 @@ canvas {
   background-color: #f3f5e500;
 }
 
+
+
+
 .overlayV video {
   margin-top: 2vw;
   height: 50vw;
@@ -4170,7 +4252,7 @@ canvas {
   }
 
   .screen-body-item.left {
-    margin-bottom: 2.5vw;
+    margin-bottom: 5vw;
   }
 
   .app-title {
@@ -4192,6 +4274,8 @@ canvas {
   .screen-body-item {
     padding: 0;
   }
+
+  
 }
 
 
