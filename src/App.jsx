@@ -21,9 +21,16 @@ const App = () => {
   const [contentLoaded, setContentLoaded] = useState(false);
 
   useEffect(() => {
+    // Add smooth scroll behavior to the entire document
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
     // Add overlay styles to head immediately
     const style = document.createElement('style');
     style.textContent = `
+      html {
+        scroll-behavior: smooth;
+      }
+      
       .loader-overlay {
         position: fixed;
         top: 0;
@@ -87,7 +94,7 @@ const App = () => {
     // Prevent scrolling initially
     document.body.style.overflow = 'hidden';
     
-    // Initialize smooth scroll
+    // Initialize smooth scroll for navbar links with enhanced easing
     document.querySelectorAll('.navbar__link').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -98,18 +105,20 @@ const App = () => {
           const startPosition = window.pageYOffset;
           const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
           const distance = targetPosition - startPosition;
-          const duration = 800;
+          const duration = 1000; // Slightly longer for smoother effect
           let start = null;
           
-          function easeInOutQuad(t) {
-            return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+          function easeInOutCubic(t) {
+            return t < 0.5 
+              ? 4 * t * t * t 
+              : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
           }
           
           function step(timestamp) {
             if (!start) start = timestamp;
             const progress = timestamp - start;
             const percentage = Math.min(progress / duration, 1);
-            const easedPercentage = easeInOutQuad(percentage);
+            const easedPercentage = easeInOutCubic(percentage);
             
             window.scrollTo(0, startPosition + distance * easedPercentage);
             

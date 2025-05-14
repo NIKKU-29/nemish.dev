@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState } from "react";
+import { useRef, useLayoutEffect, useState, useEffect } from "react";
 import {
   motion,
   useScroll,
@@ -7,6 +7,7 @@ import {
   useMotionValue,
   useVelocity,
   useAnimationFrame,
+  useInView,
 } from "framer-motion";
 
 import "../assets/ScrollVelocity.css";
@@ -42,6 +43,9 @@ export const ScrollVelocity = ({
   parallaxStyle,
   scrollerStyle,
 }) => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
+
   function VelocityText({
     children,
     baseVelocity = velocity,
@@ -55,6 +59,7 @@ export const ScrollVelocity = ({
     scrollerClassName,
     parallaxStyle,
     scrollerStyle,
+    isInView,
   }) {
     const baseX = useMotionValue(0);
     const scrollOptions = scrollContainerRef ? { container: scrollContainerRef } : {};
@@ -109,19 +114,28 @@ export const ScrollVelocity = ({
     }
 
     return (
-      <div className={parallaxClassName} style={parallaxStyle}>
+      <motion.div 
+        className={parallaxClassName} 
+        style={parallaxStyle}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ 
+          opacity: isInView ? 1 : 0, 
+          y: isInView ? 0 : 50 
+        }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <motion.div
           className={scrollerClassName}
           style={{ x, ...scrollerStyle }}
         >
           {spans}
         </motion.div>
-      </div>
+      </motion.div>
     );
   }
 
   return (
-    <section>
+    <section ref={sectionRef}>
       {texts.map((text, index) => (
         <VelocityText
           key={index}
@@ -136,6 +150,7 @@ export const ScrollVelocity = ({
           scrollerClassName={scrollerClassName}
           parallaxStyle={parallaxStyle}
           scrollerStyle={scrollerStyle}
+          isInView={isInView}
         >
           {text}&nbsp;
         </VelocityText>
