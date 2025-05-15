@@ -60,6 +60,7 @@ export const ScrollVelocity = ({
     parallaxStyle,
     scrollerStyle,
     isInView,
+    index, // Added index prop
   }) {
     const baseX = useMotionValue(0);
     const scrollOptions = scrollContainerRef ? { container: scrollContainerRef } : {};
@@ -113,16 +114,20 @@ export const ScrollVelocity = ({
       );
     }
 
+    // Define animation variants
+    const variants = {
+      hidden: { opacity: 0, y: 50, filter: "blur(10px)", scale: 0.9 },
+      visible: { opacity: 1, y: 0, filter: "blur(0px)", scale: 1 },
+    };
+
     return (
-      <motion.div 
-        className={parallaxClassName} 
+      <motion.div
+        className={parallaxClassName}
         style={parallaxStyle}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ 
-          opacity: isInView ? 1 : 0, 
-          y: isInView ? 0 : 50 
-        }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        variants={variants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
       >
         <motion.div
           className={scrollerClassName}
@@ -139,6 +144,7 @@ export const ScrollVelocity = ({
       {texts.map((text, index) => (
         <VelocityText
           key={index}
+          index={index} // Pass index to VelocityText
           className={className}
           baseVelocity={index % 2 !== 0 ? -velocity : velocity}
           scrollContainerRef={scrollContainerRef}
@@ -152,7 +158,7 @@ export const ScrollVelocity = ({
           scrollerStyle={scrollerStyle}
           isInView={isInView}
         >
-          {text}&nbsp;
+          {text} 
         </VelocityText>
       ))}
     </section>
