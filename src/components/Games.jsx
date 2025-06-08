@@ -165,7 +165,7 @@ const Games = () => {
         .game-card p {
           color: white;
           margin: 0 clamp(15px, 1.5vw, 20px) clamp(10px, 1.2vw, 15px);
-          font-size: clamp(0.8rem, 1vw, 1rem);
+          font-size: clamp(1rem, 1.5vw, 1.2rem);
           line-height: 1.5;
         }
         
@@ -178,10 +178,10 @@ const Games = () => {
         
         .game-tech span {
           background-color: rgba(250, 14, 69, 0.2);
-          color: #fa0e45;
+          color: whitesmoke;
           padding: clamp(4px, 0.4vw, 6px) clamp(8px, 0.8vw, 12px);
           border-radius: clamp(3px, 0.4vw, 5px);
-          font-size: clamp(0.7rem, 0.8vw, 0.9rem);
+          font-size: clamp(0.9rem, 1vw, 1rem);
         }
         
         .game-links {

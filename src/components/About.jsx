@@ -5,18 +5,18 @@ import RotatingText from './RotatingText';
 const About = () => {
   return (
     <div className="box discount-box">
-      <h1>I Specialize In...</h1>
       <div className="intro-text flex flex-col gap-4">
         <div className="mb-2">
           <RotatingText
             texts={[
-              'Intuitive Flow',
-              'Robust Systems',
-              'Optimized Logic',
-              'Seamless Experience',
-              'Elegant Design'
+              'Boosting Innovation',
+              'Simplifying Systems',
+              'Crafting UX Magic',
+              'Delivering Power',
+              'Building Products'
+
             ]}
-            mainClassName="px-2 bg-cyan-300 text-black overflow-hidden py-0.5 rounded-lg inline-block text-base sm:text-lg md:text-xl"
+            mainClassName="px-2 bg-cyan-300 text-black overflow-hidden py-0.5 rounded-lg inline-block text-base sm:text-lg md:text-xl font-medium"
             staggerFrom="last"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
@@ -27,9 +27,10 @@ const About = () => {
             rotationInterval={4000}
           />
         </div>
-        <p2 className="mt-2 leading-relaxed">
-          I'm a proficient Full Stack Developer with expertise in modern web technologies. Based in India, I build scalable applications with clean, maintainable code and exceptional user experiences.
-        </p2>
+        <p2 className="mt-2 leading-relaxed text-gray-700">
+  I'm a proficient <span2>Full Stack Developer</span2> with expertise in modern web technologies. Based in India, I specialize in building scalable applications with clean execution, maintainable code and exceptional user experiences that drive results.
+</p2>
+
       </div>
     </div>
   );

@@ -1739,9 +1739,16 @@ p2 {
   color: rgb(187, 174, 174);
   text-align: left;
   width: 100%;
-  margin: 0.5vw 0;
-  font-size: 1.4vw;
+  margin-top:0.8vw;
+  font-size: 1.42vw;
 }
+
+span2{
+  color: #fa0e45; 
+  font-size: 1.6vw;
+  
+}
+
 .font-box {
   height: 25vw;
   display: flex;
@@ -3394,6 +3401,10 @@ canvas {
 
 }
 
+.Highlight{
+
+  color: cyan;
+}
 
 .background {
  
