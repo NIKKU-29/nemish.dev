@@ -251,6 +251,7 @@ const ThankYou = () => {
             gap: 1rem;
             justify-content: center;
             margin-top: 2rem;
+            margin-left:3vw;
         }
 
         .button {
