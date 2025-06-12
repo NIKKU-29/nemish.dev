@@ -92,45 +92,45 @@ const App = () => {
     document.head.appendChild(style);
     
     // Prevent scrolling initially
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
     
-    // Initialize smooth scroll for navbar links with enhanced easing
-    document.querySelectorAll('.navbar__link').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+    // // Initialize smooth scroll for navbar links with enhanced easing
+    // document.querySelectorAll('.navbar__link').forEach(anchor => {
+    //   anchor.addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     const targetId = this.getAttribute('href').substring(1);
+    //     const targetElement = document.getElementById(targetId);
 
-        if (targetElement) {
-          const startPosition = window.pageYOffset;
-          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-          const distance = targetPosition - startPosition;
-          const duration = 1000; // Slightly longer for smoother effect
-          let start = null;
+    //     if (targetElement) {
+    //       const startPosition = window.pageYOffset;
+    //       const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    //       const distance = targetPosition - startPosition;
+    //       const duration = 1000; // Slightly longer for smoother effect
+    //       let start = null;
           
-          function easeInOutCubic(t) {
-            return t < 0.5 
-              ? 4 * t * t * t 
-              : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-          }
+    //       function easeInOutCubic(t) {
+    //         return t < 0.5 
+    //           ? 4 * t * t * t 
+    //           : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+    //       }
           
-          function step(timestamp) {
-            if (!start) start = timestamp;
-            const progress = timestamp - start;
-            const percentage = Math.min(progress / duration, 1);
-            const easedPercentage = easeInOutCubic(percentage);
+    //       function step(timestamp) {
+    //         if (!start) start = timestamp;
+    //         const progress = timestamp - start;
+    //         const percentage = Math.min(progress / duration, 1);
+    //         const easedPercentage = easeInOutCubic(percentage);
             
-            window.scrollTo(0, startPosition + distance * easedPercentage);
+    //         window.scrollTo(0, startPosition + distance * easedPercentage);
             
-            if (progress < duration) {
-              window.requestAnimationFrame(step);
-            }
-          }
+    //         if (progress < duration) {
+    //           window.requestAnimationFrame(step);
+    //         }
+    //       }
           
-          window.requestAnimationFrame(step);
-        }
-      });
-    });
+    //       window.requestAnimationFrame(step);
+    //     }
+    //   });
+    // });
     
     // Add loading animation
     const overlay = document.createElement('div');
